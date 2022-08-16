@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { timeThunk } from '../../redux/actions/timeAction';
 import style from './Clock.module.css';
 
 export default function Clock() {
+  // const time = useSelector((store) => store.time); // версия с использованием времени, полученного с API
+  // const dispatch = useDispatch();
+    
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     dispatch(timeThunk());
+  //   }, 1000)
+  // }, []);
 
-const [time, setTime] = useState({});
+const [time, setTime] = useState({});  // версия с использованием времени компьютера
 
   useEffect(() => {
     setInterval(() => {

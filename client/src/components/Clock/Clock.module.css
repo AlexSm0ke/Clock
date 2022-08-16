@@ -1,0 +1,73 @@
+.clock {
+    min-width: 550px;
+    margin: auto;
+    min-height: 550px;
+    background-size: cover;
+    position: relative;
+    background-color: cadetblue;
+    background-Image: url('../../../public/images/dial.png')
+  }
+  @media screen and (max-width: 549px) {
+    .clock {
+      min-width: 320px;
+      min-height: 320px;
+    }
+   }
+  
+  .clock__type_sec {
+    width: 51px;
+    height: 550px;
+    position: absolute;
+    top: 0px;
+    left: 249px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 3;
+    background-Image: url('../../../public/images/second.png');
+  }
+  @media screen and (max-width: 549px) {
+    .clock__type_sec {
+      width: 30px;
+      height: 320px;
+      left: 145px;
+    }
+   }
+  .clock__type_min {
+    width: 53px;
+    height: 475px;
+    position: absolute;
+    top: 38px;
+    left: 247px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-Image: url('../../../public/images/minute.png')
+  }
+  @media screen and (max-width: 549px) {
+    .clock__type_min {
+      width: 31px;
+      height: 280px;
+      left: 145px;
+      top: 19px;
+    }
+   }
+  .clock__type_hour {
+    width: 59px;
+    height: 310px;
+    position: absolute;
+    top: 120px;
+    left: 246px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    background-Image: url('../../../public/images/hour.png')
+  }
+  @media screen and (max-width: 549px) {
+    .clock__type_hour {
+      width: 34px;
+      height: 180px;
+      left: 143px;
+      top: 70px;
+    }
+   }
+  

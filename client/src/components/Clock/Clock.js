@@ -1,21 +1,31 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { timeThunk } from '../../redux/actions/timeAction';
 import style from './Clock.module.css';
 
 export default function Clock() {
-
-const [time, setTime] = useState({});
-
+  const time = useSelector((store) => store.time); // версия с использованием времени, полученного с API
+  const dispatch = useDispatch();
+    
   useEffect(() => {
     setInterval(() => {
-      const now = new Date();
-      setTime({
-        milliSeconds: now.getMilliseconds(),
-        seconds: now.getSeconds(),
-        minute: now.getMinutes(),
-        hours: now.getHours(),
-      });   
+      dispatch(timeThunk());
     }, 1)
   }, []);
+
+// const [time, setTime] = useState({});  // версия с использованием времени компьютера
+
+//   useEffect(() => {
+//     setInterval(() => {
+//       const now = new Date();
+//       setTime({
+//         milliSeconds: now.getMilliseconds(),
+//         seconds: now.getSeconds(),
+//         minute: now.getMinutes(),
+//         hours: now.getHours(),
+//       });   
+//     }, 1)
+//   }, []);
   
   return (
     <div className={style.clock}>

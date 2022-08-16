@@ -10,7 +10,7 @@ export default function Clock() {
   // useEffect(() => {
   //   setInterval(() => {
   //     dispatch(timeThunk());
-  //   }, 1)
+  //   }, 1000)
   // }, []);
 
 const [time, setTime] = useState({});  // версия с использованием времени компьютера

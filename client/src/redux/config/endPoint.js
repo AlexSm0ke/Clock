@@ -1,0 +1,1 @@
+export const timeAPI = () => `https://timeapi.io/api/Time/current/zone?timeZone=Europe/Amsterdam`;
